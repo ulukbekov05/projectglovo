@@ -8,6 +8,7 @@ from django_filters .rest_framework import DjangoFilterBackend
 from rest_framework .filters import OrderingFilter, SearchFilter
 from .paginations import StorePagination
 
+
 class RegisterView(generics.CreateAPIView):
     serializer_class = UserSerializer
 
@@ -136,6 +137,7 @@ class StoreDataiAPIView(generics.CreateAPIView):
 class ProductListAPIView(generics.ListAPIView):
     queryset = Product.objects.all()
     serializer_class = ProductListSerializer
+
 
 
 class ProductWideAPIView(generics.RetrieveUpdateDestroyAPIView):
